@@ -151,6 +151,5 @@ interface tstingInter {
     p13.responcibility()
  }
 
- nestedClass();
-
+ //nestedClass();
 
