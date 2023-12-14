@@ -13,7 +13,7 @@ console.log(arr1);
 console.log(arr1[4])
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////
 
 //Dictionarry
 
@@ -31,6 +31,7 @@ function testDict() {
 // testDict();
 // testArray();
 
+///////////////////////////////////////////////////////////////////////////////////
 
 //Types
 
@@ -45,7 +46,7 @@ function typeTest() {
     let c:everyDictionary = {name:"Ali",age:13}
 }
 
-
+///////////////////////////////////////////////////////////////////////////////////
 
 //Interfaces
 
@@ -60,6 +61,7 @@ interface tstingInter {
     }
    // interfacetesting()
 
+///////////////////////////////////////////////////////////////////////////////////
 
    //Classes
 
@@ -99,5 +101,56 @@ interface tstingInter {
     p10.eat()
     p10.info()
    }
-   checkClass()
+ //  checkClass()
+
+
+ ///////////////////////////////////////////////////////////////////////
+
+ // Nested Classes
+
+ class p11 {
+    name:string
+    age:number
+    religion:string
+
+    constructor (n:string,a:number,r:string) {
+        this.name = n;
+        this.age = a;
+        this.religion = r;
+        this.work();
+    }
+
+        work () {
+            console.log('The person ' + this.name + ' having age ' + this.age + ' and religion is ' + this.religion + ' is working ' ) 
+        }
+
+ }
+
+ class NGO {
+    ngoRunner:p11
+    country : string
+
+    constructor(g:p11,c:string) {
+        this.ngoRunner = g
+        this.country = c
+    }
+
+    responcibility () {
+        console.log(this.ngoRunner.name + ' is responsibile for NGO in ' + this.country )
+      
+    }
+
+ }
+
+ function nestedClass () {
+    let p12:p11 = new p11 ("Mubarak", 23 , "Muslim");
+    let p13:NGO = new NGO (p12,'Pakistan')
+    //console.log(p13)
+    console.log(p12)
+    //p12.work()
+    p13.responcibility()
+ }
+
+ nestedClass();
+
 
